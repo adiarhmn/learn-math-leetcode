@@ -89,6 +89,7 @@ function stepCountServers($grid)
             //  Jika server ada (1)  && Jika Jumlah Horizonal = 1 && Jumlah Vertikal = 1
             if ($grid[$i][$j] == 1 && ($rowCountServer[$i] == 1 && $colCountServer[$j] == 1)) {
                 $totalServer--;
+                echo "Total Server: $totalServer\n";
             }
         }
     }
@@ -134,4 +135,4 @@ function countServers($grid) {
 // echo countServers([[1,1,0,0],[0,0,1,0],[0,0,1,0],[0,0,0,1]]); // Output: 4
 
 // Gambaran dari grid
-echo stepCountServers([[1,1,0,0],[0,0,1,0],[0,0,1,0],[0,0,0,1]]); // 0
+echo stepCountServers([[1,1,0,0],[0,1,1,0],[0,0,0,1],[0,0,0,1]]); // 0
